@@ -1,23 +1,23 @@
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Logos from './components/Logos'
-import Services from './components/Services'
-import Approach from './components/Approach'
+import DarkNavbar from './components/DarkNavbar'
+import DarkHero from './components/DarkHero'
+import Who from './components/Who'
+import Testimonials from './components/Testimonials'
+import Team from './components/Team'
 import CTA from './components/CTA'
-import Footer from './components/Footer'
+import DarkFooter from './components/DarkFooter'
 
 function App() {
   return (
-    <div className="bg-white text-gray-900">
-      <Navbar />
-      <main>
-        <Hero />
-        <Logos />
-        <Services />
-        <Approach />
+    <div className="bg-gray-950 text-white snap-y snap-mandatory h-full overflow-x-hidden">
+      <DarkNavbar />
+      <main className="[scroll-snap-type:y_mandatory]">
+        <DarkHero />
+        <Who />
+        <Testimonials />
+        <Team />
         <CTA />
       </main>
-      <Footer />
+      <DarkFooter />
     </div>
   )
 }
