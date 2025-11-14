@@ -5,10 +5,12 @@ import Testimonials from './components/Testimonials'
 import Team from './components/Team'
 import CTA from './components/CTA'
 import DarkFooter from './components/DarkFooter'
+import BackgroundFX from './components/BackgroundFX'
 
 function App() {
   return (
-    <div className="bg-gray-950 text-white snap-y snap-mandatory h-full overflow-x-hidden">
+    <div className="relative bg-gray-950 text-white snap-y snap-mandatory h-full overflow-x-hidden">
+      <BackgroundFX />
       <DarkNavbar />
       <main className="[scroll-snap-type:y_mandatory]">
         <DarkHero />
