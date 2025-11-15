@@ -1,27 +1,21 @@
-import DarkNavbar from './components/DarkNavbar'
-import DarkHero from './components/DarkHero'
-import Who from './components/Who'
-import Testimonials from './components/Testimonials'
-import Team from './components/Team'
-import CTA from './components/CTA'
-import DarkFooter from './components/DarkFooter'
-import BackgroundFX from './components/BackgroundFX'
+import Layout from './Layout'
+import { Routes, Route } from 'react-router-dom'
+import Home from './pages/Home'
+import About from './pages/About'
+import Services from './pages/Services'
+import TeamPage from './pages/Team'
+import Contact from './pages/Contact'
 
-function App() {
+export default function App() {
   return (
-    <div className="relative bg-gray-950 text-white snap-y snap-mandatory h-full overflow-x-hidden">
-      <BackgroundFX />
-      <DarkNavbar />
-      <main className="[scroll-snap-type:y_mandatory]">
-        <DarkHero />
-        <Who />
-        <Testimonials />
-        <Team />
-        <CTA />
-      </main>
-      <DarkFooter />
-    </div>
+    <Routes>
+      <Route element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="about" element={<About />} />
+        <Route path="services" element={<Services />} />
+        <Route path="team" element={<TeamPage />} />
+        <Route path="contact" element={<Contact />} />
+      </Route>
+    </Routes>
   )
 }
-
-export default App

@@ -1,8 +1,9 @@
 import Spline from '@splinetool/react-spline'
+import { Link } from 'react-router-dom'
 
 export default function DarkHero() {
   return (
-    <section id="home" className="snap-start relative h-[100vh] min-h-[680px] w-full overflow-hidden bg-gray-950">
+    <section className="relative h-[100vh] min-h-[680px] w-full overflow-hidden bg-gray-950">
       <div className="absolute inset-0">
         <Spline scene="https://prod.spline.design/4cHQr84zOGAHOehh/scene.splinecode" style={{ width: '100%', height: '100%' }} />
       </div>
@@ -13,7 +14,7 @@ export default function DarkHero() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-center">
           <div className="max-w-3xl">
             <p className="inline-flex items-center gap-2 rounded-full bg-white/10 ring-1 ring-white/10 px-3 py-1 text-xs font-medium text-violet-200 shadow-sm backdrop-blur">
-              Agentic AI Consulting
+              REvamp · Agentic AI Consulting
             </p>
             <h1 className="mt-6 text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tight text-white">
               Design, deploy, and scale voice & reasoning agents
@@ -22,12 +23,12 @@ export default function DarkHero() {
               We turn ambiguous workflows into automated agent systems—from conversation design and tool orchestration to secure deployment.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-3">
-              <a href="#contact" className="inline-flex items-center justify-center rounded-full bg-white text-gray-950 px-6 py-3 text-sm font-medium shadow hover:bg-gray-200 transition">
+              <Link to="/contact" className="inline-flex items-center justify-center rounded-full bg-white text-gray-950 px-6 py-3 text-sm font-medium shadow hover:bg-gray-200 transition">
                 Book a discovery call
-              </a>
-              <a href="#who" className="inline-flex items-center justify-center rounded-full bg-white/10 px-6 py-3 text-sm font-medium ring-1 ring-white/10 text-white hover:bg-white/15 transition">
+              </Link>
+              <Link to="/about" className="inline-flex items-center justify-center rounded-full bg-white/10 px-6 py-3 text-sm font-medium ring-1 ring-white/10 text-white hover:bg-white/15 transition">
                 Learn more
-              </a>
+              </Link>
             </div>
           </div>
         </div>
